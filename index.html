@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RPG da Gabi</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://meet.jit.si/external_api.js"></script>
+<script>
+
+$(document).ready(function(){
+    domain = "meet.jit.si";
+    room = "rpgdagabi"
+    options = {
+        roomName: room,
+		height: 700,
+		parentNode: document.querySelector('#meet')
+	}
+    api = new JitsiMeetExternalAPI(domain, options);
+});
+
+</script>
+
+<style>
+    body {
+        background-color:#333;
+        color:#fff;
+       
+    }
+    #container {
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        text-align: center;
+    }
+    #meet {
+        width:70%;
+        float:left;
+    }
+
+    #dice { 
+
+        width:30%;
+        height:700px;
+        float:left;
+    }
+
+    iframe {
+        height:100%;
+        width:100%;
+    }
+</style>
+
+
+
+</head>
+<body>
+<div id="container">
+    <h2>Rpg da Gabi (gameroom)</h2>
+    <div id="meet">
+    </div>
+
+    <div id="dice">
+        <iframe src="https://rolz.org/dr?room=rpgdagabi"></iframe>
+</div>
+</div>
+</body>
+</html>
